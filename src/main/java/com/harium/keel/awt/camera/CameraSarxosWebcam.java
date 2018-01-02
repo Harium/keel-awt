@@ -20,7 +20,6 @@ public class CameraSarxosWebcam implements Camera {
 	public CameraSarxosWebcam(int id) {
 		webcam = Webcam.getDefault();
 		webcam.setViewSize(new Dimension(width, height));
-		webcam.open();
 
 		startCapture();
 	}
