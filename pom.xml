@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.harium.keel</groupId>
     <artifactId>keel-awt</artifactId>
-    <version>1.1.4</version>
+    <version>1.1.5</version>
     <packaging>jar</packaging>
     <name>Keel AWT</name>
     <description>Keel classes integrated with AWT</description>
@@ -32,7 +32,7 @@
         <dependency>
             <groupId>com.harium.keel</groupId>
             <artifactId>core</artifactId>
-            <version>1.1.4</version>
+            <version>1.1.5</version>
         </dependency>
         <dependency>
             <groupId>com.github.sarxos</groupId>
