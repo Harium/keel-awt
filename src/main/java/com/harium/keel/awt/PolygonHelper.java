@@ -1,57 +1,57 @@
 package com.harium.keel.awt;
 
 import com.harium.etyl.linear.Point2D;
-import com.harium.keel.feature.Component;
-import com.harium.keel.feature.MaskComponent;
+import com.harium.keel.feature.MaskFeature;
+import com.harium.keel.feature.PointFeature;
 
 import java.awt.*;
 
 public class PolygonHelper {
 
-    public static Polygon getBoundingBox(Component component) {
+    public static Polygon getBoundingBox(PointFeature feature) {
         Polygon p = new Polygon();
 
-        p.addPoint(component.getLowestX(), component.getLowestY());
-        p.addPoint(component.getHighestX(), component.getLowestY());
-        p.addPoint(component.getHighestX(), component.getHighestY());
-        p.addPoint(component.getLowestX(), component.getHighestY());
+        p.addPoint(feature.getLowestX(), feature.getLowestY());
+        p.addPoint(feature.getHighestX(), feature.getLowestY());
+        p.addPoint(feature.getHighestX(), feature.getHighestY());
+        p.addPoint(feature.getLowestX(), feature.getHighestY());
 
         return p;
     }
 
-    public static Polygon getPolygon(Component component) {
+    public static Polygon getPolygon(PointFeature feature) {
 
         Polygon p = new Polygon();
 
-        for (Point2D point : component.getPoints()) {
+        for (Point2D point : feature.getPoints()) {
             p.addPoint((int) point.getX(), (int) point.getY());
         }
 
         return p;
     }
 
-    public static void mergePolygon(Component component, Polygon p) {
+    public static void mergePolygon(PointFeature feature, Polygon p) {
         for (int i = 0; i < p.npoints; i++) {
             Point2D point = new Point2D(p.xpoints[i], p.ypoints[i]);
-            component.add(point);
+            feature.add(point);
         }
     }
 
-    public static Polygon getBoundingBox(MaskComponent component) {
+    public static Polygon getBoundingBox(MaskFeature feature) {
         Polygon p = new Polygon();
 
-        p.addPoint(component.getLowestX(), component.getLowestY());
-        p.addPoint(component.getHighestX(), component.getLowestY());
-        p.addPoint(component.getHighestX(), component.getHighestY());
-        p.addPoint(component.getLowestX(), component.getHighestY());
+        p.addPoint(feature.getLowestX(), feature.getLowestY());
+        p.addPoint(feature.getHighestX(), feature.getLowestY());
+        p.addPoint(feature.getHighestX(), feature.getHighestY());
+        p.addPoint(feature.getLowestX(), feature.getHighestY());
 
         return p;
     }
 
-    public static void mergePolygon(MaskComponent component, Polygon p) {
+    public static void mergePolygon(MaskFeature feature, Polygon p) {
         for (int i = 0; i < p.npoints; i++) {
             Point2D point = new Point2D(p.xpoints[i], p.ypoints[i]);
-            component.add(point);
+            feature.add(point);
         }
     }
 
