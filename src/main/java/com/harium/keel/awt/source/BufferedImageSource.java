@@ -1,44 +1,44 @@
 package com.harium.keel.awt.source;
 
+import com.harium.keel.core.source.ImageSourceImpl;
+
 import java.awt.image.BufferedImage;
 
-import com.harium.keel.core.source.ImageSource;
 
+public class BufferedImageSource extends ImageSourceImpl {
 
-public class BufferedImageSource implements ImageSource {
+    private BufferedImage image;
 
-	private BufferedImage image;
-	
-	public BufferedImageSource() {
-		super();
-	}
-	
-	public BufferedImageSource(BufferedImage image) {
-		super();
-		this.image = image;
-	}
+    public BufferedImageSource() {
+        super();
+    }
 
-	@Override
-	public int getWidth() {
-		return image.getWidth();
-	}
+    public BufferedImageSource(BufferedImage image) {
+        super();
+        this.image = image;
+    }
 
-	@Override
-	public int getHeight() {
-		return image.getHeight();
-	}
+    @Override
+    public int getWidth() {
+        return image.getWidth();
+    }
 
-	@Override
-	public int getRGB(int x, int y) {
-		return image.getRGB(x, y);
-	}
+    @Override
+    public int getHeight() {
+        return image.getHeight();
+    }
 
-	public BufferedImage getImage() {
-		return image;
-	}
+    @Override
+    public int getRGB(int x, int y) {
+        return image.getRGB(x, y);
+    }
 
-	public void setImage(BufferedImage image) {
-		this.image = image;
-	}
-	
+    public BufferedImage getImage() {
+        return image;
+    }
+
+    public void setImage(BufferedImage image) {
+        this.image = image;
+    }
+
 }
