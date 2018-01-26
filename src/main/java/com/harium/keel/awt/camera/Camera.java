@@ -4,6 +4,8 @@ import java.awt.image.BufferedImage;
 
 public interface Camera {
 	
-	public BufferedImage getBufferedImage();
+	BufferedImage getBufferedImage();
+
+	boolean isOpen();
 	
 }

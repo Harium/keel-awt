@@ -24,6 +24,10 @@ public class CameraSarxosWebcam implements Camera {
 		startCapture();
 	}
 
+	public boolean isOpen() {
+		return webcam.isOpen();
+	}
+
 	public void startCapture() {
 		webcam.open();
 	}

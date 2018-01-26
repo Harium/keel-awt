@@ -31,6 +31,11 @@ public class FakeCamera implements Camera {
         return list.get(currentFrame);
     }
 
+    @Override
+    public boolean isOpen() {
+        return true;
+    }
+
     public void nextFrame() {
         currentFrame++;
         currentFrame %= list.size();
