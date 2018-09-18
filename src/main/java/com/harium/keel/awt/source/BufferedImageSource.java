@@ -33,6 +33,11 @@ public class BufferedImageSource extends ImageSourceImpl {
         return image.getRGB(x, y);
     }
 
+    @Override
+    public void setRGB(int x, int y, int rgb) {
+        image.setRGB(x, y, rgb);
+    }
+
     public BufferedImage getImage() {
         return image;
     }

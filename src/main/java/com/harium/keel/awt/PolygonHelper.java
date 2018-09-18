@@ -1,6 +1,6 @@
 package com.harium.keel.awt;
 
-import com.harium.etyl.linear.Point2D;
+import com.harium.etyl.geometry.Point2D;
 import com.harium.keel.feature.MaskFeature;
 import com.harium.keel.feature.PointFeature;
 
