@@ -26,7 +26,6 @@ public class SwingUtils {
     for (int y = 0; y < image.getHeight(); y++) {
       for (int x = 0; x < image.getWidth(); x++) {
         image.setRGB(x, y, imageSource.getRGB(x, y));
-        ;
       }
     }
     openDialog(image);
