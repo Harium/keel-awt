@@ -9,7 +9,7 @@ import javax.swing.JLabel;
 
 public class SwingUtils {
 
-  public static void openDialog(BufferedImage image) {
+  public static JFrame openDialog(BufferedImage image) {
     ImageIcon wrapper = new ImageIcon(image);
 
     JFrame frame = new JFrame();
@@ -18,17 +18,17 @@ public class SwingUtils {
     frame.pack();
     frame.setVisible(true);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    return frame;
   }
 
-  public static void openDialog(ImageSource imageSource) {
-    BufferedImage image = new BufferedImage(imageSource.getWidth(), imageSource.getHeight(),
-        BufferedImage.TYPE_INT_RGB);
+  public static JFrame openDialog(ImageSource imageSource) {
+    BufferedImage image = new BufferedImage(imageSource.getWidth(), imageSource.getHeight(), BufferedImage.TYPE_INT_RGB);
     for (int y = 0; y < image.getHeight(); y++) {
       for (int x = 0; x < image.getWidth(); x++) {
         image.setRGB(x, y, imageSource.getRGB(x, y));
       }
     }
-    openDialog(image);
+    return openDialog(image);
   }
 
 }
